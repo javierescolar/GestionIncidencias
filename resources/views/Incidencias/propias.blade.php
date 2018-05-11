@@ -1,4 +1,3 @@
-@extends('..app')
 
 @extends('..nav')
 
@@ -8,6 +7,6 @@
 
 
 
-<h1>Home</h1>
+<h1>Mis Incidencias</h1>
             
 @endsection

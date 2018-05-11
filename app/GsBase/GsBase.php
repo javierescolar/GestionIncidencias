@@ -11,8 +11,8 @@
 		private $ejercicio="madisa";
 		private $empresa="madisa mti";
 		private $aplicacion="gsges_madisa";
-		private $usua="";
-		private $passw="";
+		private $usua="__*alj";
+		private $passw="123";
 		private $ventana="aa-incidencias-web";
 
 		public $usuario;

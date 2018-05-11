@@ -36,6 +36,7 @@ Route::group(['middleware' => 'checksession'], function () {
 
     Route::get('/perfil','UserController@getPerfil');
 
+    Route::get('/incidencias/nueva','IncidenciaController@getNueva');
 
 });
 

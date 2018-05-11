@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\GsBase\GsBase;
+use App\Usuario;
 
 class AuthController extends Controller
 {
@@ -21,10 +22,13 @@ class AuthController extends Controller
         $gsbase->accion="a_login";
         $gsbase->argumentos=json_encode(["username"=>$username,"password"=>$password]);
         
-        $usuario=$gsbase->ejecuta();
-        if($usuario!="{}"){
-            $usu=json_decode($usuario);
-            session()->put("user",$usu->usuario);
+        $data=$gsbase->ejecuta();
+        if($data!="{}"){
+            $data_json=json_decode($data);
+            #convertimos el usuario gsbase en un usuario de la clase Usuario.php
+            $usuario = new Usuario($data_json->usuario);
+            
+            session()->put("user",$usuario );
             return redirect('/');
         } 
         

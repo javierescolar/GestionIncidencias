@@ -14,29 +14,32 @@
         
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Incidencias
+            <i class="fas fa-wrench"></i> Incidencias
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Crear Incidencia</a>
-            <a class="dropdown-item" href="#">Revisar Mis Incidenicas</a>
-            <a class="dropdown-item" href="#">Revisar Incidencias Cliente</a>
+            <a class="dropdown-item" href="/incidencias/nueva"><i class="fas fa-plus-circle"></i> Crear Incidencia</a>
+            <a class="dropdown-item" href="/incidencias/propias"><i class="far fa-eye"></i> Revisar Mis Incidenicas</a>
+            <a class="dropdown-item" href="/incidencias/todas"><i class="fas fa-building"></i> Revisar Incidencias Cliente</a>
             </div>
         </li>
         
         </ul>
-        <form class="form-inline my-2 my-lg-0">
+        <div class="form-inline my-2 my-lg-0">
             <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fas fa-envelope"></i> Mis Mensajes</a>
+        </li>
             <li class="nav-item dropdown ml-auto">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                {{$user->nombre}} {{$user->apellidos}}
+                <i class="fas fa-user-circle"></i> {{$user->nombre}} {{$user->apellidos}}
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                <a class="dropdown-item" href="/perfil">Perfil</a>
-                <a class="dropdown-item" href="/logout">Cerrar Sesión</a>
+                <a class="dropdown-item" href="/perfil"><i class="fas fa-user"></i> Perfil</a>
+                <a class="dropdown-item" href="/logout"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</a>
                 </div>
             </li>
             </ul>
-        </form>
+        </div>
     </div>
     </nav>
 
