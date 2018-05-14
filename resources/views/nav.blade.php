@@ -42,5 +42,7 @@
         </div>
     </div>
     </nav>
-
+    <div id="zona-visitada">
+        <p> {{$zona}}</p>
+    </div>
 </div>

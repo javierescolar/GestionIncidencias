@@ -11,6 +11,6 @@ class UserController extends Controller
 
     public function getPerfil(){
         $user=session()->get("user");
-        return view("Usuario.perfil",['user'=>$user]);
+        return view("Usuario.perfil",['user'=>$user,'zona'=>'Perfil']);
     }
 }

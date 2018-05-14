@@ -24,19 +24,15 @@ Route::group(['middleware' => 'guest'], function () {
 Route::group(['middleware' => 'checksession'], function () {
     Route::get('/logout','AuthController@logout');
 
-    Route::get('/home', function () {
-        $user=session()->get("user");
-        return view('Home/index',['user'=>$user]);
-    });
-
-    Route::get('/', function () {
-        $user=session()->get("user");
-        return view('Home/index',['user'=>$user]);
-    });
+    Route::get('/','HomeController@index');
+    Route::get('/home','HomeController@index');
 
     Route::get('/perfil','UserController@getPerfil');
 
     Route::get('/incidencias/nueva','IncidenciaController@getNueva');
+    Route::post('/incidencias/nueva','IncidenciaController@postNueva');
+    Route::get('/incidencias/todas','IncidenciaController@getTodas');
+    Route::get('/incidencias/propias','IncidenciaController@getPropias');
 
 });
 

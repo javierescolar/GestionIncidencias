@@ -23,7 +23,7 @@ class AuthController extends Controller
         $gsbase->argumentos=json_encode(["username"=>$username,"password"=>$password]);
         
         $data=$gsbase->ejecuta();
-        if($data!="{}"){
+        if(!in_array($data,["1","2","3","4","{}"])){
             $data_json=json_decode($data);
             #convertimos el usuario gsbase en un usuario de la clase Usuario.php
             $usuario = new Usuario($data_json->usuario);

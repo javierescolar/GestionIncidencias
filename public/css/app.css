@@ -27,8 +27,33 @@ nav li a {
     color:rgb(27, 82, 184) !important;
 }
 
+.color-madisa{
+    color:rgb(27, 82, 184) !important;
+}
+
 .dropdown-item:hover {
     background-color:rgba(27, 82, 184, 0.226) !important;
     
 }
 
+#zona-visitada{
+    background-color:rgb(71, 71, 71);
+    color:rgb(180, 180, 180);
+}
+
+#zona-visitada p{
+   margin-left: 1em;
+   font-size: 0.8em;
+}
+
+.bg-success-personal{
+    background-color: rgb(225, 255, 225) !important;
+}
+
+.bg-danger-personal{
+    background-color: rgb(253, 232, 208) !important;
+}
+
+.bg-card-personal{
+    background-color: rgb(238, 238, 238) !important;
+}

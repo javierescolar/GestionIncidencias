@@ -4,13 +4,13 @@
 
 @section('content')
     
-<div class="card mt-5">
+<div class="card mt-5 bg-card-personal">
     <div class="card-header bgcolor-madisa">
     <h5>Nueva Incidencia</h5>
     </div>
     <div class="card-body">
-        <form action="/" method="GET">
-
+        <form action="/incidencias/nueva" method="POST">
+        @csrf
             <div class="form-group">
                 <label for="cod_centro">Centro:</label>
                 <select name="cod_centro" id="select_centro" class="form-control">
