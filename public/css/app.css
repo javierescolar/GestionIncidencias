@@ -27,6 +27,12 @@ nav li a {
     color:rgb(27, 82, 184) !important;
 }
 
+nav li a:hover {
+    color:rgb(27, 82, 184) !important;
+    font-weight: bold !important;
+  
+}
+
 .color-madisa{
     color:rgb(27, 82, 184) !important;
 }
